@@ -29,18 +29,16 @@ void main() {
     expect("D", "D");
     convertirARomano(500);
   });
-}
 
-String convertirARomano(int numero) {
-  List<String> numRomanos = ["X", "IX", "V", "IV", "I"];
-  List<int> numeros = [10, 9, 5, 4, 1];
-
-  String resultado = "";
-  for (int i = 0; i < numeros.length; i++) {
-    while (numero >= numeros[i]) {
-      resultado += numRomanos[i];
-      numero -= numeros[i];
+  test('Numero a ingresar', () async {
+    String resultado;
+    int numeroTransformar = 422;
+    resultado = convertirARomano(numeroTransformar);
+    if (numeroTransformar > 500) {
+      print("Fallido el numero es mayor que 500");
     }
-  }
-  return resultado;
+    if (numeroTransformar <= 500) {
+      print(resultado);
+    }
+  });
 }
