@@ -1,5 +1,6 @@
 int calculate() {
   return 6 * 7;
+  print("je");
 }
 
 String convertirARomano(int numero) {
